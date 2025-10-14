@@ -1,3 +1,262 @@
+:root {
+    --primary-redcolor: #000;
+    --primary_blackcolor: #000;
+    --white__bgrcolor: #fff;
+    --slider__fontfamily: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --transform__transition: transform 200ms ease-in-out;
+    --opacity__delay: opacity 0.3s ease-in-out
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    outline: none;
+}
+
+body {
+    background: #111;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.highlight-match {
+    background: yellow;
+    color: transparent;
+}
+
+.highlight-match.current-match {
+    background: orange;
+}
+
+.head__tag h2 {
+    color: var(--white__bgrcolor);
+    margin: 0 0 10px 0;
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: var(---slider__fontfamily);
+    border-bottom: 1px solid var(--white__bgrcolor);
+    display: flex;
+    justify-content: space-between;
+}
+
+@keyframes colorBlink {
+    0% {
+        color: #999999;
+        opacity: 1;
+    }
+
+    25% {
+        color: #cccccc;
+        opacity: 0.6;
+    }
+
+    50% {
+        color: #ffffff;
+        opacity: 0.3;
+    }
+
+    75% {
+        color: #cccccc;
+        opacity: 0.6;
+    }
+
+    100% {
+        color: #ffffff;
+        opacity: 1;
+    }
+}
+
+.view-code-btn {
+    position: relative;
+    display: inline-block;
+    animation: colorBlink 2s linear infinite;
+    transition: color 0.3s ease;
+}
+
+.view-code-btn:hover {
+    animation-play-state: paused;
+}
+
+.view-code-btn::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: auto;
+    right: -37px;
+    left: auto;
+    top: -17px;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.view-code-btn:hover::after,
+.view-code-btn:hover::before {
+    opacity: 1;
+}
+
+button,
+a,
+td,
+div,
+img {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    outline: none;
+}
+
+.vin--relative {
+    position: relative;
+}
+
+.vinflex {
+    display: flex;
+}
+
+.vinflex--spacebetween {
+    justify-content: space-between;
+}
+
+.vinflex--justifycenter {
+    justify-content: center;
+}
+
+.vinflex--justifyend {
+    justify-content: flex-end;
+}
+
+.vinflex--alignitemscenter {
+    align-items: center;
+}
+
+.vinflex--1 {
+    flex: 1;
+}
+
+.vin--inflex {
+    display: inline-flex;
+}
+
+.vin--textcenter {
+    text-align: center;
+}
+
+.vin--absolute {
+    position: absolute;
+}
+
+.input__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 10px;
+    flex-direction: row;
+}
+
+.input__col {
+    flex: 1;
+}
+
+.view-code-container {
+    transform-origin: top center;
+    transform: rotateX(-90deg);
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    width: 100%;
+    overflow: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    will-change: transform, opacity;
+    display: none;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    background: #000;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.view-code-container.show {
+    display: block;
+    transform: rotateX(0deg);
+    opacity: 1;
+}
+
+.view-code-container pre {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+.view-code-container.show pre {
+    max-height: 300px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+
+.tab-btn {
+    flex: 1;
+    padding: 19px 0;
+    cursor: pointer;
+    border: none;
+    background: #3a3a3a;
+    transition: background 0.3s ease;
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.tab-indicator {
+    left: 0;
+    transform: translateX(0);
+    width: 0;
+    z-index: 20;
+    height: 4px;
+    background: #ccc;
+}
+
+@media (max-width: 1024px) {
+    .input__row {
+        padding: 15px;
+    }
+
+}
+
+img,
+a,
+body,
+html,
+div,
+section {
+    -webkit-user-drag: none;
+}
+
+
 body {
     font-family: sans-serif;
     padding: 20px;
