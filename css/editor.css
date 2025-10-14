@@ -922,7 +922,7 @@ form#search__popupmain label {
 }
 
 /* Scene Wrapper */
-.scene {
+.datatable-loader .scene {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -932,11 +932,11 @@ form#search__popupmain label {
 }
 
 /* --- 1️⃣ Search Scene --- */
-.search-scene {
+.datatable-loader .search-scene {
     animation-delay: 0s;
 }
 
-.search-icon {
+.datatable-loader .search-icon {
     font-size: 25px;
     position: absolute;
     top: 40%;
@@ -947,7 +947,7 @@ form#search__popupmain label {
     padding: 10px;
 }
 
-.hand {
+.datatable-loader .hand {
     position: absolute;
     font-size: 30px;
     top: 48%;
@@ -956,7 +956,7 @@ form#search__popupmain label {
     animation: clickHand 3s infinite;
 }
 
-.dropdown {
+.datatable-loader .dropdown {
     position: absolute;
     width: 80px;
     height: 0;
@@ -971,33 +971,37 @@ form#search__popupmain label {
 }
 
 /* --- 2️⃣ Refresh Scene --- */
-.refresh-scene {
+.datatable-loader .refresh-scene {
     animation-delay: 3s;
 }
 
-.refresh-icon {
-    font-size: 40px;
+.datatable-loader .refresh-icon {
+    font-size: 18px;
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translateX(-50%);
     animation: rotateIcon 3s infinite linear;
+    border: 1px solid #fff;
+    padding: 8px;
+    border-radius: 10px;
 }
 
-.table {
+.datatable-loader .table {
     width: 100px;
     height: 60px;
     background: #e0e0e0;
     border-radius: 6px;
     position: absolute;
-    bottom: 20%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: inset 0 0 0 2px #ccc;
+    overflow: hidden;
 }
 
 /* Table shimmer animation */
-.table::after {
+.datatable-loader .table::after {
     content: "";
     position: absolute;
     top: 0;
