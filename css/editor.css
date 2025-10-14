@@ -614,6 +614,8 @@ form#search__popupmain label {
     position: relative;
     width: 150px;
     height: 150px;
+    font-family: "Poppins", sans-serif;
+    color: #333;
 }
 
 /* Scene Wrapper */
@@ -626,7 +628,7 @@ form#search__popupmain label {
     animation: sceneSwap 6s infinite;
 }
 
-/* --- 1️⃣ Search Scene --- */
+/* --- Search Scene --- */
 .datatable-loader .search-scene {
     animation-delay: 0s;
 }
@@ -653,7 +655,7 @@ form#search__popupmain label {
 
 .datatable-loader .dropdown {
     position: absolute;
-    width: 80px;
+    width: 100px;
     height: 0;
     background: #fff;
     border: 2px solid #ccc;
@@ -662,59 +664,81 @@ form#search__popupmain label {
     transform: translateX(-50%);
     border-radius: 5px;
     opacity: 0;
+    overflow: hidden;
     animation: dropdownOpen 3s infinite;
 }
 
-/* --- 2️⃣ Refresh Scene --- */
+.datatable-loader .dropdown .datatable__loading-text {
+    display: block;
+    font-size: 10px;
+    text-align: center;
+    padding: 5px;
+    animation: textSlide 2s infinite linear;
+}
+
+/* --- Refresh Scene --- */
 .datatable-loader .refresh-scene {
     animation-delay: 3s;
 }
 
 .datatable-loader .refresh-icon {
-    font-size: 25px;
+    font-size: 18px;
     position: absolute;
-    top: 40%;
-    left: 45%;
-    transform: translate(-50%, -50%);
+    top: 19%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotateIcon 3s infinite linear;
     border: 1px solid #fff;
+    padding: 8px;
     border-radius: 10px;
-    padding: 10px;
 }
 
-/* Hand for refresh */
 .datatable-loader .hand-refresh {
-    position: absolute;
-    font-size: 30px;
-    top: 48%;
-    left: 50%;
-    transform-origin: top left;
+    top: 33%;
+    left: 55%;
     animation: clickHandRefresh 3s infinite;
 }
 
-/* Table for shimmer */
-.datatable-loader .table {
-    width: 80px;
-    height: 46px;
-    background: #e0e0e0;
+.datatable-loader .datatable__table {
+    width: 100px;
+    height: 60px;
+    background: #f1f1f1;
     border-radius: 6px;
     position: absolute;
-    top: 60%;
+    bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: inset 0 0 0 2px #ccc;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Table shimmer animation */
-.datatable-loader .table::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-    animation: shimmer 1.5s infinite;
+.datatable-loader .table .datatable__loading-text {
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    animation: fadeText 1.5s infinite ease-in-out;
+}
+
+.datatable-loader .table .data__table-row {
+    width: 80%;
+    height: 6px;
+    background: #d0d0d0;
+    border-radius: 4px;
+    margin: 2px 0;
+    opacity: 0;
+    animation: rowLoad 3s infinite;
+}
+
+.datatable-loader .table .data__table-row:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.datatable-loader .table .data__table-row:nth-child(3) {
+    animation-delay: 0.8s;
 }
 
 /* --- Animations --- */
@@ -774,7 +798,7 @@ form#search__popupmain label {
     }
 
     30% {
-        height: 50px;
+        height: 60px;
         opacity: 1;
     }
 }
@@ -790,13 +814,49 @@ form#search__popupmain label {
     }
 }
 
-/* Table shimmer */
-@keyframes shimmer {
+/* Text sliding animation */
+@keyframes textSlide {
     0% {
-        left: -100%;
+        transform: translateX(-20%);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateX(0%);
+        opacity: 1;
     }
 
     100% {
-        left: 100%;
+        transform: translateX(20%);
+        opacity: 0.6;
+    }
+}
+
+/* Text fade */
+@keyframes fadeText {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Table row loading effect */
+@keyframes rowLoad {
+
+    0%,
+    100% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    30%,
+    70% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

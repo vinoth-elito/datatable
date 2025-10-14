@@ -1828,16 +1828,23 @@ async function loadAll() {
     const readyIconfirstContainer = document.createElement('div');
     readyIconfirstContainer.className = 'loader__second';
     readyIconfirstContainer.innerHTML = `
-    <div class="datatable-loader">
+   <div class="datatable-loader">
   <div class="scene search-scene">
     <div class="search-icon">🔍</div>
     <div class="hand">🤚</div>
-    <div class="dropdown"></div>
+    <div class="dropdown">
+      <span class="datatable__loading-text">Please Wait...</span>
+    </div>
   </div>
   <div class="scene refresh-scene">
     <div class="refresh-icon">🔄</div>
     <div class="hand hand-refresh">🤚</div>
-    <div class="table"></div>
+    <div class="datatable__table">
+      <span class="datatable__loading-text">Please Wait...</span>
+      <div class="data__table-row"></div>
+      <div class="data__table-row"></div>
+      <div class="data__table-row"></div>
+    </div>
   </div>
 </div>
 `;
@@ -1918,12 +1925,19 @@ async function loadAll() {
   <div class="scene search-scene">
     <div class="search-icon">🔍</div>
     <div class="hand">🤚</div>
-    <div class="dropdown"></div>
+    <div class="dropdown">
+      <span class="datatable__loading-text">Please Wait...</span>
+    </div>
   </div>
   <div class="scene refresh-scene">
     <div class="refresh-icon">🔄</div>
     <div class="hand hand-refresh">🤚</div>
-    <div class="table"></div>
+    <div class="datatable__table">
+      <span class="datatable__loading-text">Please Wait...</span>
+      <div class="data__table-row"></div>
+      <div class="data__table-row"></div>
+      <div class="data__table-row"></div>
+    </div>
   </div>
 </div>
 `;
