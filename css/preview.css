@@ -557,6 +557,7 @@ section {
                 &.active {
                     color: #000;
                     z-index: 200;
+
                 }
             }
         }
