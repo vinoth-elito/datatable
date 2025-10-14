@@ -13,7 +13,7 @@ function buildSrcDoc() {
     const INIT_CODE = `
             window.componentFunctionMap = window.componentFunctionMap || {
             '.datatable': {
-                func: 'initializeDataTables',
+                func: 'initializeDataTables'
             }
             };
 
