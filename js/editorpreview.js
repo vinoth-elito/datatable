@@ -1872,23 +1872,14 @@ async function loadAll() {
     const htmlEditor = document.getElementById('html-editor');
     const rows = [
         [
-            `https://raw.githubusercontent.com/vinoth-elito/vinoth-sliders/main/slider1.html?v=${cacheBuster}`,
-
-            `https://raw.githubusercontent.com/vinoth-elito/vinoth-sliders/main/slider2.html?v=${cacheBuster}`
+            `https://raw.githubusercontent.com/vinoth-elito/datatable/main/datatable1.html?v=${cacheBuster}`
         ],
         [
-            `https://raw.githubusercontent.com/vinoth-elito/vinoth-sliders/main/slider3.html?v=${cacheBuster}`,
-            `https://raw.githubusercontent.com/vinoth-elito/vinoth-sliders/main/slider4.html?v=${cacheBuster}`
-        ],
-        [
-            `https://raw.githubusercontent.com/vinoth-elito/vinoth-sliders/main/slider5.html?v=${cacheBuster}`,
-            `https://raw.githubusercontent.com/vinoth-elito/vinoth-sliders/main/slider6.html?v=${cacheBuster}`
-        ],
-        [
-            `https://raw.githubusercontent.com/vinoth-elito/vinoth-sliders/main/slider7.html?v=${cacheBuster}`
+            `https://raw.githubusercontent.com/vinoth-elito/datatable/main/datatable2.html?v=${cacheBuster}`
         ]
 
     ];
+
     let finalHTML = '';
     for (let i = 0; i < rows.length; i++) {
         let style = i != 0 ? ' style="justify-content:left;margin-top:30px;"' : '';
