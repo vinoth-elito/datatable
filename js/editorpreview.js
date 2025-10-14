@@ -1828,7 +1828,7 @@ async function loadAll() {
     const readyIconfirstContainer = document.createElement('div');
     readyIconfirstContainer.className = 'loader__second';
     readyIconfirstContainer.innerHTML = `
-    <div class="page-loader">
+    <div class="page-loaderinn">
   <div class="loader-bar"></div>
   <div class="loader-bar"></div>
   <div class="loader-bar"></div>
