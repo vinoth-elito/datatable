@@ -1833,17 +1833,20 @@ async function loadAll() {
     <div class="search-icon">🔍</div>
     <div class="hand">🤚</div>
     <div class="dropdown">
-      <span class="datatable__loading-text">Please Wait...</span>
+      <span class="loading-text">Please Wait...</span>
     </div>
   </div>
+
   <div class="scene refresh-scene">
     <div class="refresh-icon">🔄</div>
     <div class="hand hand-refresh">🤚</div>
-    <div class="datatable__table">
-      <span class="datatable__loading-text">Please Wait...</span>
-      <div class="data__table-row"></div>
-      <div class="data__table-row"></div>
-      <div class="data__table-row"></div>
+    <div class="table">
+      <span class="loading-text">Please Wait...</span>
+      <div class="table-body">
+        <div class="table-row"></div>
+        <div class="table-row"></div>
+        <div class="table-row"></div>
+      </div>
     </div>
   </div>
 </div>
