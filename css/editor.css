@@ -725,7 +725,7 @@ form#search__popupmain label {
     text-align: center;
     margin: 5px 0;
     color: #000;
-    animation: fadeText 1.5s infinite ease-in-out;
+    animation: textSlide 2s infinite linear;
 }
 
 .table-body {
@@ -738,6 +738,7 @@ form#search__popupmain label {
     gap: 4px;
     position: relative;
     animation: tableChange 3s infinite;
+    margin-top: 10px;
 }
 
 .table-row {
