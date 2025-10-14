@@ -34,6 +34,7 @@
     <link id="fa-css" rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         as="style" onload="this.onload=null;this.rel='stylesheet'; document.body.classList.add('css-ready')">
     <link rel="stylesheet" href="https://vinoth-elito.github.io/vinoth-sliders/css/editor.css">
+    <link rel="stylesheet" href="https://vinoth-elito.github.io/datatable/css/preview.css">
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     </noscript>
@@ -1130,7 +1131,8 @@
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script>
-        $(document).ready(function () {
+
+        function initializeDataTables() {
             $(".data__table__container").each(function () {
                 const $container = $(this);
                 const $table = $container.find("table");
@@ -1767,6 +1769,9 @@
                 }
                 renderTable();
             });
+        }
+        $(document).ready(function () {
+            initializeDataTables();
         });
     </script>
 </body>
