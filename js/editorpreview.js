@@ -352,7 +352,7 @@ function buildSrcDoc() {
   ${html}
 
   ${jq}
-  <script defer src="https://vinoth-elito.github.io/vinoth-sliders/js/datatable.js?v=${cacheBuster}"></script>
+  <script defer src="https://vinoth-elito.github.io/datatable/js/datatable.js?v=${cacheBuster}"></script>
 
   <script>
     try { ${js} } catch (e) { console.error(e); }
