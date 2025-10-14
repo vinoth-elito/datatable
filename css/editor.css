@@ -686,15 +686,14 @@ form#search__popupmain label {
 }
 
 .refresh-icon {
-    font-size: 18px;
+    font-size: 25px;
     position: absolute;
-    top: 19%;
-    left: 50%;
-    transform: translateX(-50%);
-    animation: rotateIcon 3s infinite linear;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
     border: 1px solid #fff;
-    padding: 8px;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .hand-refresh {
