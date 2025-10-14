@@ -13,7 +13,7 @@ function buildSrcDoc() {
     const INIT_CODE = `
             window.componentFunctionMap = window.componentFunctionMap || {
             '.datatable': {
-                func:'$(".data__table__container").each(function () {'
+                func: 'initializeDataTables',
             }
             };
 
@@ -1771,11 +1771,8 @@ function loadScripts() {
         }
     });
     if (typeof window.attachResize === 'function') {
-        combinedCode += '$(".cuz__slider").each(function () {\n';
-        combinedCode += '    CustomAppSlider($(this));\n';
-        combinedCode += '});\n';
         combinedCode += '$(document).ready(function() {\n';
-        combinedCode += '    CustomAppSlider();\n';
+        combinedCode += '    initializeDataTables();\n';
         combinedCode += '});\n';
     }
     editor.value = combinedCode;
@@ -1899,7 +1896,7 @@ async function loadAll() {
 
     await new Promise(resolve => {
         const interval = setInterval(() => {
-            const allReady = ['attachResize', 'CustomAppSlider']
+            const allReady = ['initializeDataTables']
                 .every(fn => typeof window[fn] === 'function');
             if (allReady) {
                 clearInterval(interval);

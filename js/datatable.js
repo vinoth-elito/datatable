@@ -1,4 +1,5 @@
-$(document).ready(function () {
+
+function initializeDataTables() {
     $(".data__table__container").each(function () {
         const $container = $(this);
         const $table = $container.find("table");
@@ -635,4 +636,7 @@ $(document).ready(function () {
         }
         renderTable();
     });
+}
+$(document).ready(function () {
+    initializeDataTables();
 });
