@@ -1762,7 +1762,7 @@ function loadScripts() {
     const editor = document.getElementById('js-editor');
     const functionsToInclude = [
         'attachResize',
-        'CustomAppSlider'
+        'initializeDataTables'
     ];
     let combinedCode = '';
     functionsToInclude.forEach(funcName => {
