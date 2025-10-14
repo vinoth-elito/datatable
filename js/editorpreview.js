@@ -1828,10 +1828,16 @@ async function loadAll() {
     const readyIconfirstContainer = document.createElement('div');
     readyIconfirstContainer.className = 'loader__second';
     readyIconfirstContainer.innerHTML = `
-    <div class="page-loaderinn">
-  <div class="loader-bar"></div>
-  <div class="loader-bar"></div>
-  <div class="loader-bar"></div>
+    <div class="datatable-loader">
+  <div class="scene search-scene">
+    <div class="search-icon">🔍</div>
+    <div class="hand">🤚</div>
+    <div class="dropdown"></div>
+  </div>
+  <div class="scene refresh-scene">
+    <div class="refresh-icon">🔄</div>
+    <div class="table"></div>
+  </div>
 </div>
 </div>
 `;
