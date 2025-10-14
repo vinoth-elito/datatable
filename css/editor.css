@@ -682,6 +682,14 @@ form#search__popupmain label {
     border-radius: 10px;
 }
 
+/* Hand for refresh */
+.datatable-loader .hand-refresh {
+    top: 33%;
+    left: 55%;
+    animation: clickHandRefresh 3s infinite;
+}
+
+/* Table for shimmer */
 .datatable-loader .table {
     width: 100px;
     height: 60px;
@@ -725,7 +733,7 @@ form#search__popupmain label {
     }
 }
 
-/* Hand click */
+/* Hand click for search */
 @keyframes clickHand {
 
     0%,
@@ -736,6 +744,20 @@ form#search__popupmain label {
 
     30% {
         transform: translate(-50%, -50%) rotate(10deg) scale(0.95);
+    }
+}
+
+/* Hand click for refresh */
+@keyframes clickHandRefresh {
+
+    0%,
+    70%,
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    30% {
+        transform: translate(-50%, -50%) rotate(8deg) scale(0.95);
     }
 }
 

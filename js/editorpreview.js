@@ -1829,16 +1829,19 @@ async function loadAll() {
     readyIconfirstContainer.className = 'loader__second';
     readyIconfirstContainer.innerHTML = `
     <div class="datatable-loader">
+  <!-- Scene 1: Search -->
   <div class="scene search-scene">
     <div class="search-icon">🔍</div>
     <div class="hand">🤚</div>
     <div class="dropdown"></div>
   </div>
+
+  <!-- Scene 2: Refresh -->
   <div class="scene refresh-scene">
     <div class="refresh-icon">🔄</div>
+    <div class="hand hand-refresh">🤚</div>
     <div class="table"></div>
   </div>
-</div>
 </div>
 `;
     loadingMsg.appendChild(readyIconfirstContainer);
