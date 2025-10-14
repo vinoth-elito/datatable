@@ -665,6 +665,10 @@ form#search__popupmain label {
     opacity: 0;
     overflow: hidden;
     animation: dropdownOpen 3s infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .dropdown .loading-text {
