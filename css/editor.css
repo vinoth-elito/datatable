@@ -917,8 +917,8 @@ form#search__popupmain label {
 
 .datatable-loader {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 /* Scene Wrapper */
@@ -937,18 +937,21 @@ form#search__popupmain label {
 }
 
 .search-icon {
-    font-size: 36px;
+    font-size: 25px;
     position: absolute;
     top: 40%;
     left: 45%;
     transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .hand {
     position: absolute;
     font-size: 30px;
-    top: 65%;
-    left: 60%;
+    top: 48%;
+    left: 50%;
     transform-origin: top left;
     animation: clickHand 3s infinite;
 }
