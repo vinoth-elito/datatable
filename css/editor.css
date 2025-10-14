@@ -697,8 +697,10 @@ form#search__popupmain label {
 }
 
 .hand-refresh {
-    top: 33%;
-    left: 55%;
+    font-size: 30px;
+    top: 48%;
+    left: 50%;
+    transform-origin: top left;
     animation: clickHandRefresh 3s infinite;
 }
 
