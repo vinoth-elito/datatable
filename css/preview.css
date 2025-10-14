@@ -553,6 +553,11 @@ section {
                 color: #333;
                 position: relative;
                 z-index: 20;
+
+                &.active {
+                    color: #fff;
+                    z-index: 200;
+                }
             }
         }
     }
