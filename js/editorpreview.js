@@ -1772,8 +1772,11 @@ function loadScripts() {
         }
     });
     if (typeof window.attachResize === 'function') {
+        combinedCode += '$(".cuz__slider").each(function () {\n';
+        combinedCode += '    CustomAppSlider($(this));\n';
+        combinedCode += '});\n';
         combinedCode += '$(document).ready(function() {\n';
-        combinedCode += '    initializeDataTables();\n';
+        combinedCode += '    CustomAppSlider();\n';
         combinedCode += '});\n';
     }
     editor.value = combinedCode;
