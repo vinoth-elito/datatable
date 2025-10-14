@@ -1829,14 +1829,11 @@ async function loadAll() {
     readyIconfirstContainer.className = 'loader__second';
     readyIconfirstContainer.innerHTML = `
     <div class="datatable-loader">
-  <!-- Scene 1: Search -->
   <div class="scene search-scene">
     <div class="search-icon">🔍</div>
     <div class="hand">🤚</div>
     <div class="dropdown"></div>
   </div>
-
-  <!-- Scene 2: Refresh -->
   <div class="scene refresh-scene">
     <div class="refresh-icon">🔄</div>
     <div class="hand hand-refresh">🤚</div>
@@ -1917,21 +1914,16 @@ async function loadAll() {
     const readyIconContainer = document.createElement('div');
     readyIconContainer.className = 'loader__second';
     readyIconContainer.innerHTML = `
-<div class="slider-loader-drag">
-  <div class="load__hand">&#128070;</div>
-  <div class="load__slider__track">
-    <div class="load__slider__slide">1</div>
-    <div class="load__slider__slide">2</div>
-    <div class="load__slider__slide">3</div>
-    <div class="load__slider__slide">4</div>
-    <div class="load__slider__slide">5</div>
-    <div class="load__slider__slide">6</div>
-    <div class="load__slider__slide">7</div>
-    <div class="load__slider__slide">8</div>
-    <div class="load__slider__slide">9</div>
-    <div class="load__slider__slide">10</div>
-    <div class="load__slider__slide">11</div>
-    <div class="load__slider__slide">12</div>
+ <div class="datatable-loader">
+  <div class="scene search-scene">
+    <div class="search-icon">🔍</div>
+    <div class="hand">🤚</div>
+    <div class="dropdown"></div>
+  </div>
+  <div class="scene refresh-scene">
+    <div class="refresh-icon">🔄</div>
+    <div class="hand hand-refresh">🤚</div>
+    <div class="table"></div>
   </div>
 </div>
 `;
