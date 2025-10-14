@@ -1,0 +1,309 @@
+<div class="table-wrapper data__table__container">
+    <div class="table__head">
+        <div class="datatable__tabs">
+            <ul class="tabs-container" id="type-tabs" data-table="creditTable">
+                <li class="tab active" data-column="Type" data-value="All">All</li>
+                <li class="tab" data-column="Type" data-value="Credit">Credit</li>
+                <li class="tab" data-column="Type" data-value="Debit">Debit</li>
+            </ul>
+            <div class="tab-indicator"></div>
+        </div>
+        <div class="controls">
+            <div id="refreshBtn" class="table__refresh">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.32263 2.00631 4.71265 2.66082 3.50667 3.82667L2 5.33333M2 5.33333V2M2 5.33333H5.33333M2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14C9.67737 13.9937 11.2874 13.3392 12.4933 12.1733L14 10.6667M14 10.6667H10.6667M14 10.6667V14"
+                        stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </div>
+            <div class="search-container">
+                <div class="search-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14 13.9999L11.1067 11.1066M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z"
+                            stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="search__section">
+                    <p>Search for Merchant Info, Order ID, UTR, TXN ID <span>*</span></p>
+                    <div class="search__input">
+                        <div class="search__input--icon" aria-hidden="true">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 13.9999L11.1067 11.1066M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <label for="search" class="hide__label">Search table</label>
+                        <input type="text" id="search" class="table__search" placeholder="Search..."
+                            aria-label="Search table">
+                        <div class="search__submit__section">
+                            <button type="submit" class="search__subm__btn" aria-label="Submit search">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-dropdown">
+                <div class="dropdown-selected">
+                    <div class="dropdown__selected__left">
+                        <div class="dropdown__calendar">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.33333 1.33334V4.00001M10.6667 1.33334V4.00001M2 6.66668H14M5.33333 9.33334H5.34M8 9.33334H8.00667M10.6667 9.33334H10.6733M5.33333 12H5.34M8 12H8.00667M10.6667 12H10.6733M3.33333 2.66668H12.6667C13.403 2.66668 14 3.26363 14 4.00001V13.3333C14 14.0697 13.403 14.6667 12.6667 14.6667H3.33333C2.59695 14.6667 2 14.0697 2 13.3333V4.00001C2 3.26363 2.59695 2.66668 3.33333 2.66668Z"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <span>All</span>
+                    </div>
+                    <div class="dropdown__arrow">
+                        <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L7 7L13 1" stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </div>
+                </div>
+                <ul class="dropdown-options">
+                    <li data-value="All" class="active">All</li>
+                    <li data-value="Today">Today</li>
+                    <li data-value="Last 7 Days">Last Seven Days</li>
+                    <li data-value="Last 30 Days">Last 30 Days</li>
+                    <li data-value="Last 90 Days">Last 90 Days</li>
+                    <li data-value="Custom Range">Custom Range</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <table id="creditTable">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th data-sort-type="number">
+                    <div class="head__text">
+                        <p>Ref Number</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+                <th data-sort-type="text">
+                    <div class="head__text">
+                        <p>Merchant Name</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+                <th data-sort-type="text">
+                    <div class="head__text">
+                        <p>Prev Balance</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+                <th data-sort-type="text">
+                    <div class="head__text">
+                        <p>Amount</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+                <th data-sort-type="text">
+                    <div class="head__text">
+                        <p>Updated Balance</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+                <th data-sort-type="text">
+                    <div class="head__text">
+                        <p>Recipient/sender</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+                <th data-sort-type="text">
+                    <div class="head__text">
+                        <p>Transaction Status</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+                <th data-sort-type="text">
+                    <div class="head__text">
+                        <p>Processed At</p>
+                        <span class="sort-arrow">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14 10.6667L11.3333 13.3333M11.3333 13.3333L8.66667 10.6667M11.3333 13.3333V2.66666M2 5.33332L4.66667 2.66666M4.66667 2.66666L7.33333 5.33332M4.66667 2.66666V13.3333"
+                                    stroke="#717680" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="data-row">
+                <td class="drop__arrow">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7L1 1" stroke="#717680" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </td>
+                <td>
+                    01
+                </td>
+                <td>Ajith Kumar</td>
+                <td>
+                    <span class="rupee__symbol">₹</span>
+                    <span class="previous__balance">0123456</span>
+                </td>
+                <td>
+                    <span class="rupee__symbol">₹</span>
+                    <span class="debit__amount">421</span>
+                </td>
+                <td>
+                    <span class="rupee__symbol">₹</span>
+                    <span class="updated__balance">0123456</span>
+                </td>
+                <td>Test Doe</td>
+                <td data-value="Debit">Debit</td>
+                <td>21 Aug 2025, 09:00:00</td>
+            </tr>
+            <tr class="show__div">
+                <td colspan="12">
+                    <div class="fold__content">
+                        Details for John Doe: Lorem ipsum dolor sit amet, consectetur adipiscing elit sasasas
+                        jahshahsjash
+                        jshajshjahsjhsjahs.
+                    </div>
+                </td>
+            </tr>
+
+            <tr class="data-row">
+                <td class="drop__arrow">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7L1 1" stroke="#717680" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                </td>
+                <td>
+                    02
+                </td>
+                <td>Alice Johnson</td>
+                <td>
+                    <span class="rupee__symbol">₹</span>
+                    <span class="previous__balance">0123456</span>
+                </td>
+                <td>
+                    <span class="rupee__symbol">₹</span>
+                    <span class="debit__amount">421</span>
+                </td>
+                <td>
+                    <span class="rupee__symbol">₹</span>
+                    <span class="updated__balance">0123456</span>
+                </td>
+                <td>John Doe</td>
+                <td data-value="Credit">Credit</td>
+                <td>21 Aug 2025, 09:00:00</td>
+            </tr>
+            <tr class="show__div">
+                <td colspan="12">
+                    <div class="fold__content">
+                        Details for John Doe: Lorem ipsum dolor sit amet, consectetur adipiscing elit sasasas
+                        jahshahsjash
+                        jshajshjahsjhsjahs.
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <div class="table__footer">
+        <div class="count__infos">
+            Show
+            <label for="rowCountSelectcredit" class="hide__label">Rows per page:</label>
+            <!-- <select id="rowCountSelectcredit" name="rowCountcredit" class="table__row__count"
+                            aria-label="Rows per page">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                        </select> -->
+            <div class="custom__count__dropdown table__row__count">
+                <div class="count__selected">
+                    <span>10</span>
+                    <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5L4 4.5L7 1.5" stroke="#717680" stroke-width="1.2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <ul class="table__row__options">
+                    <li data-value="5">5</li>
+                    <li data-value="10" class="active">10</li>
+                    <li data-value="20">20</li>
+                </ul>
+            </div>
+            entries
+
+        </div>
+        <div class="pagination"></div>
+    </div>
+</div>
