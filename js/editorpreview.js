@@ -1763,7 +1763,7 @@ function loadScripts() {
     const editor = document.getElementById('js-editor');
     const functionsToInclude = [
         'attachResize',
-        'initializeDataTables'
+        ''
     ];
     let combinedCode = '';
     functionsToInclude.forEach(funcName => {
@@ -1772,11 +1772,8 @@ function loadScripts() {
         }
     });
     if (typeof window.attachResize === 'function') {
-        combinedCode += '$(".cuz__slider").each(function () {\n';
-        combinedCode += '    CustomAppSlider($(this));\n';
-        combinedCode += '});\n';
         combinedCode += '$(document).ready(function() {\n';
-        combinedCode += '    CustomAppSlider();\n';
+        combinedCode += '    initializeDataTables();\n';
         combinedCode += '});\n';
     }
     editor.value = combinedCode;
