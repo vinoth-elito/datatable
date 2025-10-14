@@ -1828,19 +1828,11 @@ async function loadAll() {
     const readyIconfirstContainer = document.createElement('div');
     readyIconfirstContainer.className = 'loader__second';
     readyIconfirstContainer.innerHTML = `
-    <div class="loading__slider__loader">
-  <div class="loading__slider__track">
-    <div class="loading__slider__slide">Please Wait</div>
-    <div class="loading__slider__slide">Please Wait</div>
-    <div class="loading__slider__slide">Please Wait</div>
-    <div class="loading__slider__slide">Please Wait</div>
-  </div>
-  <div class="loading__slider__pagination">
-    <span class="loading__dot"></span>
-    <span class="loading__dot"></span>
-    <span class="loading__dot"></span>
-    <span class="loading__dot"></span>
-  </div>
+    <div class="page-loader">
+  <div class="loader-bar"></div>
+  <div class="loader-bar"></div>
+  <div class="loader-bar"></div>
+</div>
 </div>
 `;
     loadingMsg.appendChild(readyIconfirstContainer);
