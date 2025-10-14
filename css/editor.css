@@ -672,6 +672,7 @@ form#search__popupmain label {
     font-size: 10px;
     text-align: center;
     padding: 5px;
+    color: #000;
     animation: textSlide 2s infinite linear;
 }
 
