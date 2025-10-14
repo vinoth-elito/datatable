@@ -673,7 +673,7 @@ form#search__popupmain label {
 .datatable-loader .refresh-icon {
     font-size: 18px;
     position: absolute;
-    top: 35%;
+    top: 19%;
     left: 50%;
     transform: translateX(-50%);
     animation: rotateIcon 3s infinite linear;
