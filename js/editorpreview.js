@@ -1763,19 +1763,17 @@ function loadScripts() {
     const editor = document.getElementById('js-editor');
     const functionsToInclude = [
         'attachResize',
-        ''
+        'initializeDataTables'
     ];
     let combinedCode = '';
     functionsToInclude.forEach(funcName => {
         if (typeof window[funcName] === 'function') {
             combinedCode += window[funcName].toString() + '\n\n';
+            combinedCode += '$(document).ready(function() {\n';
+            combinedCode += '    initializeDataTables();\n';
+            combinedCode += '});\n';
         }
     });
-    if (typeof window.attachResize === 'function') {
-        combinedCode += '$(document).ready(function() {\n';
-        combinedCode += '    initializeDataTables();\n';
-        combinedCode += '});\n';
-    }
     editor.value = combinedCode;
 }
 async function typeWithBackspaceLoop(element, messages, typingSpeed = 50, pause = 800, stopFlag) {
