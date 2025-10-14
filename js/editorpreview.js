@@ -13,7 +13,7 @@ function buildSrcDoc() {
     const INIT_CODE = `
             window.componentFunctionMap = window.componentFunctionMap || {
             '.datatable': {
-                event:'$(".data__table__container").each(function () {'
+                func:'$(".data__table__container").each(function () {'
             }
             };
 
