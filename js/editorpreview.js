@@ -12,10 +12,8 @@ function buildSrcDoc() {
     const jq = window.$jqlibraryURL ? `<script src="${window.$jqlibraryURL}?v=${cacheBuster}" defer></script>` : '';
     const INIT_CODE = `
             window.componentFunctionMap = window.componentFunctionMap || {
-            '.vincuzslider': {
-                func: 'CustomAppSlider',
-                funccommon: 'attachResize',
-                event:'$(".cuz__slider").each(function () { CustomAppSlider($(this)); });'
+            '.datatable': {
+                event:'$(".data__table__container").each(function () {'
             }
             };
 
