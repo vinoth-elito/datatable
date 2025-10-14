@@ -719,7 +719,7 @@ form#search__popupmain label {
     font-size: 10px;
     text-align: center;
     margin: 5px 0;
-    color: #555;
+    color: #000;
     animation: fadeText 1.5s infinite ease-in-out;
 }
 
