@@ -1924,25 +1924,40 @@ async function loadAll() {
     const readyIconContainer = document.createElement('div');
     readyIconContainer.className = 'loader__second';
     readyIconContainer.innerHTML = `
-  <div class="datatable-loader">
-  <div class="scene search-scene">
-    <div class="search-icon">🔍</div>
-    <div class="hand">🤚</div>
-    <div class="dropdown">
-      <span class="loading-text">Please Wait...</span>
+  <div class="animation-wrapper">
+  <!-- Left Side -->
+  <div class="left-panel">
+    <div class="tabs">
+      <div class="tab active">Overview</div>
+      <div class="tab">Reports</div>
+      <div class="tab">Settings</div>
+      <div class="hand"></div>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Role</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>John</td><td>Developer</td></tr>
+          <tr><td>Alice</td><td>Designer</td></tr>
+          <tr><td>David</td><td>Manager</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 
-  <div class="scene refresh-scene">
-    <div class="refresh-icon">🔄</div>
-    <div class="hand hand-refresh">🤚</div>
-    <div class="table">
-      <span class="loading-text">Please Wait...</span>
-      <div class="table-body">
-        <div class="table-row"></div>
-        <div class="table-row"></div>
-        <div class="table-row"></div>
-      </div>
+  <!-- Right Side -->
+  <div class="right-panel">
+    <div class="loader-dropdown">
+      <select>
+        <option>Choose Option</option>
+        <option>Profile</option>
+        <option>Settings</option>
+        <option>Logout</option>
+      </select>
+      <div class="hand"></div>
     </div>
   </div>
 </div>

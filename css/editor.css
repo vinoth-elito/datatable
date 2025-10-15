@@ -902,3 +902,167 @@ form#search__popupmain label {
         transform: translateY(0);
     }
 }
+
+
+.animation-wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+/* ========== LEFT PANEL ========== */
+.left-panel {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.tab {
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    cursor: pointer;
+    background: #f9fafb;
+    transition: 0.3s;
+}
+
+.tab.active {
+    background: #2563eb;
+    color: #fff;
+}
+
+/* Hand animation for tab */
+.tabs .hand {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('https://cdn-icons-png.flaticon.com/512/32/32175.png') no-repeat center/contain;
+    left: -35px;
+    top: 5px;
+    animation: moveHandTab 4s infinite ease-in-out;
+}
+
+@keyframes moveHandTab {
+    0% {
+        top: 5px;
+    }
+
+    33% {
+        top: 45px;
+    }
+
+    66% {
+        top: 85px;
+    }
+
+    100% {
+        top: 5px;
+    }
+}
+
+/* Tab active state cycle */
+@keyframes changeTabActive {
+
+    0%,
+    100% {
+        background: #2563eb;
+        color: #fff;
+    }
+
+    33% {
+        background: #2563eb;
+        color: #fff;
+    }
+
+    34%,
+    66% {
+        background: #f9fafb;
+        color: #000;
+    }
+}
+
+/* Table Animation */
+.table-wrapper table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-wrapper tbody {
+    animation: rearrangeRows 4s infinite;
+}
+
+@keyframes rearrangeRows {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(-20px);
+    }
+
+    66% {
+        transform: translateY(20px);
+    }
+}
+
+/* ========== RIGHT PANEL ========== */
+.right-panel {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.right-panel .loader-dropdown {
+    position: relative;
+}
+
+.right-panel .loader-dropdown select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.right-panel .loader-dropdown .hand {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: url('https://cdn-icons-png.flaticon.com/512/32/32175.png') no-repeat center/contain;
+    right: -40px;
+    top: 5px;
+    animation: moveHandDropdown 3s infinite ease-in-out;
+}
+
+@keyframes moveHandDropdown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
