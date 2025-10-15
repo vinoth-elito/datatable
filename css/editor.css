@@ -617,22 +617,20 @@ form#search__popupmain label {
     font-family: "Poppins", sans-serif;
 }
 
-/* Scene base */
-.scene {
+.loader-scene {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     transform: scale(0.95);
-    animation: sceneSwap 6s infinite;
+    animation: loader-sceneSwap 6s infinite;
 }
 
-/* --- SEARCH SCENE --- */
-.search-scene {
+.search-loader-scene {
     animation-delay: 0s;
 }
 
-.search-icon {
+.loader-search-icon {
     font-size: 25px;
     position: absolute;
     top: 40%;
@@ -643,7 +641,7 @@ form#search__popupmain label {
     padding: 10px;
 }
 
-.scene .hand {
+.loader-scene .hand {
     position: absolute;
     font-size: 30px;
     top: 48%;
@@ -654,7 +652,7 @@ form#search__popupmain label {
     filter: grayscale(70%);
 }
 
-.scene .dropdown {
+.loader-scene .loader-dropdown {
     position: absolute;
     width: 100px;
     height: 0;
@@ -673,7 +671,7 @@ form#search__popupmain label {
 
 }
 
-.scene .dropdown .loading-text {
+.loader-scene .loader-dropdown .loader-loading-text {
     display: block;
     font-size: 10px;
     text-align: center;
@@ -685,8 +683,7 @@ form#search__popupmain label {
     animation: typing 2s steps(20, end) infinite;
 }
 
-/* --- REFRESH SCENE --- */
-.refresh-scene {
+.refresh-loader-scene {
     animation-delay: 3s;
 }
 
@@ -711,7 +708,7 @@ form#search__popupmain label {
     filter: grayscale(70%);
 }
 
-.table {
+.loader-table {
     position: absolute;
     width: 100px;
     height: 60px;
@@ -729,7 +726,7 @@ form#search__popupmain label {
     flex-direction: column;
 }
 
-.table .loading-text {
+.loader-table .loader-loading-text {
     font-size: 10px;
     text-align: center;
     margin: 5px 0;
@@ -778,10 +775,7 @@ form#search__popupmain label {
     transition: all 0.3s ease;
 }
 
-/* --- ANIMATIONS --- */
-
-/* Scene switching */
-@keyframes sceneSwap {
+@keyframes loader-sceneSwap {
 
     0%,
     45% {
@@ -796,7 +790,6 @@ form#search__popupmain label {
     }
 }
 
-/* Hand click */
 @keyframes clickHand {
 
     0%,
@@ -823,7 +816,6 @@ form#search__popupmain label {
     }
 }
 
-/* Dropdown open */
 @keyframes dropdownOpen {
 
     0%,
@@ -839,7 +831,6 @@ form#search__popupmain label {
     }
 }
 
-/* Refresh rotation */
 @keyframes rotateIcon {
     0% {
         transform: translateX(-50%) rotate(0deg);
@@ -850,7 +841,6 @@ form#search__popupmain label {
     }
 }
 
-/* Text sliding for dropdown */
 @keyframes textSlide {
     0% {
         transform: translateX(-20%);
@@ -868,7 +858,6 @@ form#search__popupmain label {
     }
 }
 
-/* Text fading for table */
 @keyframes fadeText {
 
     0%,
@@ -881,7 +870,6 @@ form#search__popupmain label {
     }
 }
 
-/* New table animation: rows changing */
 @keyframes tableChange {
     0% {
         transform: translateY(0);
@@ -922,7 +910,6 @@ form#search__popupmain label {
     box-sizing: border-box;
 }
 
-/* ===== LEFT SIDE (TABS) ===== */
 .skeleton-left {
     position: relative;
     flex-direction: row;
@@ -936,7 +923,6 @@ form#search__popupmain label {
     border: 1px solid #fff;
 }
 
-/* Tabs (skeleton) */
 .skeleton-tab {
     height: 20px;
     border-radius: 8px;
@@ -946,7 +932,6 @@ form#search__popupmain label {
     flex: 1;
 }
 
-/* Shimmer effect */
 .skeleton-tab::after {
     content: "";
     position: absolute;
@@ -958,7 +943,6 @@ form#search__popupmain label {
     animation: shimmer 1.5s infinite;
 }
 
-/* Hand icon */
 .skeleton-page-loader .hand {
     position: absolute;
     left: 31px;
@@ -971,7 +955,6 @@ form#search__popupmain label {
     animation: moveHand 6s infinite ease-in-out alternate;
 }
 
-/* Keyframes stay the same */
 @keyframes moveHand {
     0% {
         left: 0px;
@@ -992,11 +975,8 @@ form#search__popupmain label {
     100% {
         left: 140px;
     }
-
-    /* stays at end briefly */
 }
 
-/* Active tab highlight when hand is over it */
 .skeleton-tab:nth-child(1) {
     animation: activeTabCycle 6s infinite;
     animation-delay: 0s;
@@ -1017,7 +997,6 @@ form#search__popupmain label {
     animation-delay: 4.5s;
 }
 
-/* Active effect */
 @keyframes activeTabCycle {
 
     0%,
@@ -1028,11 +1007,8 @@ form#search__popupmain label {
     30% {
         background: #cbd5e1;
     }
-
-    /* darker shade = active state */
 }
 
-/* Shimmer */
 @keyframes shimmer {
     0% {
         left: -150px;
@@ -1043,7 +1019,6 @@ form#search__popupmain label {
     }
 }
 
-/* ===== RIGHT SIDE (TABLE) ===== */
 .skeleton-right {
     width: 100%;
 }
@@ -1069,7 +1044,6 @@ form#search__popupmain label {
     animation: shimmer 1.5s infinite;
 }
 
-/* Table Skeleton Rows */
 .skeleton-table {
     display: flex;
     flex-direction: column;
@@ -1105,7 +1079,6 @@ form#search__popupmain label {
     animation-delay: 1.2s;
 }
 
-/* shimmer inside table rows */
 .skeleton-row::after {
     content: "";
     position: absolute;
@@ -1117,7 +1090,6 @@ form#search__popupmain label {
     animation: shimmer 1.5s infinite;
 }
 
-/* ===== KEYFRAMES ===== */
 @keyframes shimmer {
     0% {
         left: -150px;

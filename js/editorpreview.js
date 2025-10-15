@@ -1829,19 +1829,19 @@ async function loadAll() {
     readyIconfirstContainer.className = 'loader__second';
     readyIconfirstContainer.innerHTML = `
    <div class="datatable-loader">
-  <div class="scene search-scene">
-    <div class="search-icon">🔍</div>
+  <div class="loader-scene search-loader-scene">
+    <div class="loader-search-icon">🔍</div>
     <div class="hand">🤚</div>
-    <div class="dropdown">
-      <span class="loading-text">Please Wait...</span>
+    <div class="loader-dropdown">
+      <span class="loader-loading-text">Please Wait...</span>
     </div>
   </div>
 
-  <div class="scene refresh-scene">
+  <div class="loader-scene refresh-loader-scene">
     <div class="refresh-icon">🔄</div>
     <div class="hand hand-refresh">🤚</div>
-    <div class="table">
-      <span class="loading-text">Please Wait...</span>
+    <div class="loader-table">
+      <span class="loader-loading-text">Please Wait...</span>
       <div class="table-body">
         <div class="table-row"></div>
         <div class="table-row"></div>
@@ -1925,7 +1925,6 @@ async function loadAll() {
     readyIconContainer.className = 'loader__second';
     readyIconContainer.innerHTML = `
   <div class="skeleton-page-loader">
-  <!-- LEFT SIDE: Tabs -->
   <div class="skeleton-left">
   <div class="skeleton-tab"></div>
   <div class="skeleton-tab"></div>
@@ -1933,8 +1932,6 @@ async function loadAll() {
   <div class="skeleton-tab"></div>
   <div class="hand">🤚</div>
 </div>
-
-  <!-- RIGHT SIDE: Table -->
   <div class="skeleton-right">
     <div class="skeleton-header"></div>
     <div class="skeleton-table">

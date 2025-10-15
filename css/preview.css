@@ -381,7 +381,7 @@ section {
         gap: 16px;
 
         & .table__refresh,
-        & .search-icon {
+        & .loader-search-icon {
             border: 1px solid #D5D7DA;
             border-radius: 4px;
             padding: 8px;

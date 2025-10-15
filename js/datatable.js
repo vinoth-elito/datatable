@@ -17,7 +17,7 @@ function initializeDataTables() {
         const $refreshBtn = $container.find(".table__refresh");
         const $tabs = $container.find(".tab");
         const $indicator = $container.find(".tab-indicator");
-        const $search = $container.find(".search-icon");
+        const $search = $container.find(".loader-search-icon");
         const $dropdown = $container.find(".custom-dropdown");
         const $selected = $dropdown.find(".dropdown-selected");
         const $options = $dropdown.find(".dropdown-options li");
