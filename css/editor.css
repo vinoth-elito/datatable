@@ -982,15 +982,15 @@ form#search__popupmain label {
     }
 
     50% {
-        left: 180px;
+        left: 140px;
     }
 
     75% {
-        left: 270px;
+        left: 140px;
     }
 
     100% {
-        left: 270px;
+        left: 140px;
     }
 
     /* stays at end briefly */
