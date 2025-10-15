@@ -643,7 +643,7 @@ form#search__popupmain label {
     padding: 10px;
 }
 
-.hand {
+.scene .hand {
     position: absolute;
     font-size: 30px;
     top: 48%;
@@ -948,7 +948,7 @@ form#search__popupmain label {
 }
 
 /* Hand icon */
-.hand {
+.skeleton-page-loader .hand {
     position: absolute;
     left: -35px;
     width: 28px;
