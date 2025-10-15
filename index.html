@@ -139,17 +139,22 @@
             });
         };
         document.head.appendChild(script);
-        const offlineMessage = document.getElementById('offline-message');
-        function updateNetworkStatus() {
+        const offlineScreen = document.getElementById('offline-screen');
+
+        function showOfflineMessage() {
             if (navigator.onLine) {
-                offlineMessage.style.display = 'none';
+                offlineScreen.style.display = 'none';
             } else {
-                offlineMessage.style.display = 'block';
+                offlineScreen.style.display = 'block';
             }
         }
-        updateNetworkStatus();
-        window.addEventListener('online', updateNetworkStatus);
-        window.addEventListener('offline', updateNetworkStatus);
+
+        // Check when page loads
+        showOfflineMessage();
+
+        // Listen for changes in network status
+        window.addEventListener('online', showOfflineMessage);
+        window.addEventListener('offline', showOfflineMessage);
     </script>
 </body>
 
