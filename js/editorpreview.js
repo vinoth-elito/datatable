@@ -1927,11 +1927,12 @@ async function loadAll() {
   <div class="skeleton-page-loader">
   <!-- LEFT SIDE: Tabs -->
   <div class="skeleton-left">
-    <div class="skeleton-tab"></div>
-    <div class="skeleton-tab"></div>
-    <div class="skeleton-tab"></div>
-    <div class="skeleton-tab"></div>
-  </div>
+  <div class="skeleton-tab"></div>
+  <div class="skeleton-tab"></div>
+  <div class="skeleton-tab"></div>
+  <div class="skeleton-tab"></div>
+  <div class="hand"></div>
+</div>
 
   <!-- RIGHT SIDE: Table -->
   <div class="skeleton-right">

@@ -915,39 +915,92 @@ form#search__popupmain label {
 
 /* ===== LEFT SIDE (TABS) ===== */
 .skeleton-left {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 160px;
+    gap: 12px;
+    width: 180px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+/* Tabs (skeleton) */
 .skeleton-tab {
     height: 20px;
     border-radius: 8px;
     background: #e5e7eb;
     position: relative;
     overflow: hidden;
-    animation: tabActiveChange 6s infinite;
 }
 
-/* Active shimmer transition per tab */
-.skeleton-left .skeleton-tab:nth-child(1) {
+/* Shimmer effect */
+.skeleton-tab::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150px;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+/* Hand icon */
+.hand {
+    position: absolute;
+    left: -35px;
+    width: 28px;
+    height: 28px;
+    background: url('https://cdn-icons-png.flaticon.com/512/32/32175.png') no-repeat center/contain;
+    animation: moveHand 6s infinite ease-in-out;
+}
+
+/* Animate the hand moving between tabs */
+@keyframes moveHand {
+
+    0%,
+    100% {
+        top: 6px;
+    }
+
+    25% {
+        top: 46px;
+    }
+
+    50% {
+        top: 86px;
+    }
+
+    75% {
+        top: 126px;
+    }
+}
+
+/* Active tab highlight when hand is over it */
+.skeleton-tab:nth-child(1) {
+    animation: activeTabCycle 6s infinite;
     animation-delay: 0s;
 }
 
-.skeleton-left .skeleton-tab:nth-child(2) {
+.skeleton-tab:nth-child(2) {
+    animation: activeTabCycle 6s infinite;
     animation-delay: 1.5s;
 }
 
-.skeleton-left .skeleton-tab:nth-child(3) {
+.skeleton-tab:nth-child(3) {
+    animation: activeTabCycle 6s infinite;
     animation-delay: 3s;
 }
 
-.skeleton-left .skeleton-tab:nth-child(4) {
+.skeleton-tab:nth-child(4) {
+    animation: activeTabCycle 6s infinite;
     animation-delay: 4.5s;
 }
 
-@keyframes tabActiveChange {
+/* Active effect */
+@keyframes activeTabCycle {
 
     0%,
     100% {
@@ -958,7 +1011,18 @@ form#search__popupmain label {
         background: #cbd5e1;
     }
 
-    /* darker when active */
+    /* darker shade = active state */
+}
+
+/* Shimmer */
+@keyframes shimmer {
+    0% {
+        left: -150px;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 /* ===== RIGHT SIDE (TABLE) ===== */
