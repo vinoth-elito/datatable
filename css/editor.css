@@ -677,7 +677,10 @@ form#search__popupmain label {
     text-align: center;
     padding: 5px;
     color: #000;
-    animation: textSlide 2s infinite linear;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(20, end) infinite;
 }
 
 /* --- REFRESH SCENE --- */
@@ -727,7 +730,24 @@ form#search__popupmain label {
     text-align: center;
     margin: 5px 0;
     color: #000;
-    animation: textSlide 2s infinite linear;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(20, end) infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
 }
 
 .table-body {

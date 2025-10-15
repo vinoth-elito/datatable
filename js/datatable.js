@@ -383,7 +383,7 @@ function initializeDataTables() {
             $tbody.empty().append(originalRows);
             $table.find("tr.show__div").removeClass("show");
             $table.find("tr.data-row").removeClass("active-row");
-            const defaultValue = 10;
+            const defaultValue = 5;
             perPage = defaultValue;
             lastPerPage = defaultValue;
             $rowCountOptions.removeClass("active");
