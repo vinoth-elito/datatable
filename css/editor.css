@@ -734,6 +734,7 @@ form#search__popupmain label {
     white-space: nowrap;
     overflow: hidden;
     animation: typing 2s steps(20, end) infinite;
+    min-height: 10px;
 }
 
 @keyframes typing {
