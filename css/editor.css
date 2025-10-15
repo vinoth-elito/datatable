@@ -651,10 +651,10 @@ form#search__popupmain label {
     transform-origin: top left;
     animation: clickHand 3s infinite;
     color: #999;
-    filter: grayscale(100%);
+    filter: grayscale(70%);
 }
 
-.dropdown {
+.scene .dropdown {
     position: absolute;
     width: 100px;
     height: 0;
@@ -673,7 +673,7 @@ form#search__popupmain label {
 
 }
 
-.dropdown .loading-text {
+.scene .dropdown .loading-text {
     display: block;
     font-size: 10px;
     text-align: center;
@@ -708,7 +708,7 @@ form#search__popupmain label {
     transform-origin: top left;
     animation: clickHandRefresh 3s infinite;
     color: #999;
-    filter: grayscale(100%);
+    filter: grayscale(70%);
 }
 
 .table {
@@ -910,24 +910,30 @@ form#search__popupmain label {
 
 .skeleton-page-loader {
     display: flex;
-    gap: 50px;
-    background: #fff;
-    padding: 30px;
+    gap: 15px;
+    background: transparent;
+    padding: 10px;
     border-radius: 16px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #fff;
+    flex-direction: column;
+    width: 200px;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 /* ===== LEFT SIDE (TABS) ===== */
 .skeleton-left {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 12px;
-    width: 180px;
-    padding: 20px;
-    background: #fff;
+    width: 100%;
+    padding: 10px;
     border-radius: 16px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    background: transparent;
+    border: 1px solid #fff;
 }
 
 /* Tabs (skeleton) */
@@ -937,6 +943,7 @@ form#search__popupmain label {
     background: #e5e7eb;
     position: relative;
     overflow: hidden;
+    flex: 1;
 }
 
 /* Shimmer effect */
@@ -946,7 +953,7 @@ form#search__popupmain label {
     top: 0;
     left: -150px;
     height: 100%;
-    width: 150px;
+    width: 100%;
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
     animation: shimmer 1.5s infinite;
 }
@@ -957,9 +964,11 @@ form#search__popupmain label {
     left: 31px;
     width: 28px;
     height: 28px;
-    animation: moveHand 6s infinite ease-in-out;
     color: #999;
-    filter: grayscale(100%);
+    filter: grayscale(70%);
+    top: 50%;
+    transform: translateY(-50%);
+    animation: moveHand 6s infinite ease-in-out;
 }
 
 /* Animate the hand moving between tabs */
@@ -967,19 +976,19 @@ form#search__popupmain label {
 
     0%,
     100% {
-        top: 6px;
+        left: 0px;
     }
 
     25% {
-        top: 46px;
+        left: 90px;
     }
 
     50% {
-        top: 86px;
+        left: 180px;
     }
 
     75% {
-        top: 126px;
+        left: 270px;
     }
 }
 
@@ -1032,7 +1041,7 @@ form#search__popupmain label {
 
 /* ===== RIGHT SIDE (TABLE) ===== */
 .skeleton-right {
-    width: 400px;
+    width: 100%;
 }
 
 .skeleton-header {
