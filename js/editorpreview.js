@@ -1931,7 +1931,7 @@ async function loadAll() {
   <div class="skeleton-tab"></div>
   <div class="skeleton-tab"></div>
   <div class="skeleton-tab"></div>
-  <div class="hand"></div>
+  <div class="hand">🤚</div>
 </div>
 
   <!-- RIGHT SIDE: Table -->
