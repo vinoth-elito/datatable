@@ -1924,40 +1924,24 @@ async function loadAll() {
     const readyIconContainer = document.createElement('div');
     readyIconContainer.className = 'loader__second';
     readyIconContainer.innerHTML = `
-  <div class="animation-wrapper">
-  <!-- Left Side -->
-  <div class="left-panel">
-    <div class="tabs">
-      <div class="tab active">Overview</div>
-      <div class="tab">Reports</div>
-      <div class="tab">Settings</div>
-      <div class="hand"></div>
-    </div>
-
-    <div class="table-wrapper">
-      <table>
-        <thead>
-          <tr><th>Name</th><th>Role</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>John</td><td>Developer</td></tr>
-          <tr><td>Alice</td><td>Designer</td></tr>
-          <tr><td>David</td><td>Manager</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <div class="skeleton-page-loader">
+  <!-- LEFT SIDE: Tabs -->
+  <div class="skeleton-left">
+    <div class="skeleton-tab"></div>
+    <div class="skeleton-tab"></div>
+    <div class="skeleton-tab"></div>
+    <div class="skeleton-tab"></div>
   </div>
 
-  <!-- Right Side -->
-  <div class="right-panel">
-    <div class="loader-dropdown">
-      <select>
-        <option>Choose Option</option>
-        <option>Profile</option>
-        <option>Settings</option>
-        <option>Logout</option>
-      </select>
-      <div class="hand"></div>
+  <!-- RIGHT SIDE: Table -->
+  <div class="skeleton-right">
+    <div class="skeleton-header"></div>
+    <div class="skeleton-table">
+      <div class="skeleton-row"></div>
+      <div class="skeleton-row"></div>
+      <div class="skeleton-row"></div>
+      <div class="skeleton-row"></div>
+      <div class="skeleton-row"></div>
     </div>
   </div>
 </div>
