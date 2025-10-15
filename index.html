@@ -46,6 +46,9 @@
 </head>
 
 <body>
+    <div id="offline-message" class="offline-message">
+        ⚠️ Please connect to the internet
+    </div>
     <div id="page-loader">
         <div class="page--loader__cnt">
             <img src="https://vinoth-elito.github.io/datatable/images/og-image.webp" width="300" height="300"
@@ -136,6 +139,17 @@
             });
         };
         document.head.appendChild(script);
+        const offlineMessage = document.getElementById('offline-message');
+        function updateNetworkStatus() {
+            if (navigator.onLine) {
+                offlineMessage.style.display = 'none';
+            } else {
+                offlineMessage.style.display = 'block';
+            }
+        }
+        updateNetworkStatus();
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
     </script>
 </body>
 
