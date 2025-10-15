@@ -169,6 +169,7 @@ img {
     gap: 20px;
     padding: 0 10px;
     flex-direction: row;
+    position: relative;
 }
 
 .input__col {
