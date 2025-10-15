@@ -139,8 +139,7 @@
             });
         };
         document.head.appendChild(script);
-        const offlineScreen = document.getElementById('offline-screen');
-
+        const offlineScreen = document.getElementById('offline-message');
         function showOfflineMessage() {
             if (navigator.onLine) {
                 offlineScreen.style.display = 'none';
@@ -148,11 +147,7 @@
                 offlineScreen.style.display = 'block';
             }
         }
-
-        // Check when page loads
         showOfflineMessage();
-
-        // Listen for changes in network status
         window.addEventListener('online', showOfflineMessage);
         window.addEventListener('offline', showOfflineMessage);
     </script>
