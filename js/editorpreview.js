@@ -1941,8 +1941,6 @@ async function loadAll() {
       <div class="skeleton-row"></div>
       <div class="skeleton-row"></div>
       <div class="skeleton-row"></div>
-      <div class="skeleton-row"></div>
-      <div class="skeleton-row"></div>
     </div>
   </div>
 </div>
