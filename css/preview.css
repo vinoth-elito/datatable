@@ -256,6 +256,7 @@ html,
 div,
 section {
     -webkit-user-drag: none;
+    -moz-user-drag: none;
 }
 
 .table-wrapper {
