@@ -1744,15 +1744,12 @@ document.addEventListener('click', function (e) {
 
 
 
-document.querySelector("body").addEventListener('click', (e) => {
-
-    const target = e.target.closest(".editor-sidebar button"); if (target) {
-        const dataactive = target.attr('data-editor');
-        target.classList.add("active").siblings('button').classList.remove("active");
-        const container = target.closest('.editor-container');
-        container.find('.editor-panel').classList.remove("active");
-        container.find('#' + dataactive).classList.add("active");
-    }
+$('body').on('click', '.editor-sidebar button', function () {
+    var dataactive = $(this).attr('data-editor');
+    $(this).addClass('active').siblings('button').removeClass('active');
+    var container = $(this).closest('.editor-container');
+    container.find('.editor-panel').removeClass('active');
+    container.find('#' + dataactive).addClass('active');
 });
 
 window.addEventListener("beforeunload", function (e) {
