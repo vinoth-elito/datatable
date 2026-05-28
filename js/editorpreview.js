@@ -18,15 +18,6 @@ function buildSrcDoc() {
             onload="this.onload=null;this.rel='stylesheet'">
     ` : '';
     const jq = window.$jqlibraryURL ? `<script src="${window.$jqlibraryURL}?v=${cacheBuster}" defer></script>` : '';
-
-
-
-
-
-    
-
-
-
     const INIT_CODE = `
             window.componentFunctionMap = window.componentFunctionMap || {
             '.datatable': {
