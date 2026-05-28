@@ -8,15 +8,7 @@ function buildSrcDoc() {
     const html = htmlEditor?.value ?? '';
     const js = jsEditor?.value ?? '';
     const faLinkEl = window.parent?.document?.getElementById('fa-css');
-    const faHref = faLinkEl?.href ? `
-    <link rel="preload" 
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/webfonts/fa-solid-900.woff2"
-            as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" 
-            href="${faLinkEl.href}"
-            as="style" 
-            onload="this.onload=null;this.rel='stylesheet'">
-    ` : '';
+    const faHref = faLinkEl?.href ? `<link id="fa-css" rel="stylesheet" href="${faLinkEl.href}">` : '';
     const jq = window.$jqlibraryURL ? `<script src="${window.$jqlibraryURL}?v=${cacheBuster}" defer></script>` : '';
     const INIT_CODE = `
             window.componentFunctionMap = window.componentFunctionMap || {
